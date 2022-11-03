@@ -73,3 +73,14 @@ object X extends App {
 
 
 }
+
+object pr extends App{
+
+  val l = 500000009l
+  println(l.toBinaryString)
+  val k = Math.pow(2, l.toBinaryString.length-1).toLong
+  println( k )
+  println( k.toBinaryString )
+  println( l - k )
+
+}
