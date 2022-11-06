@@ -23,7 +23,7 @@ object thirteen extends App {
       if (length % 2 == 0) {
         val shorterHalves = recur(length / 2 - 1)
         val halves = recur(length / 2)
-        var value = ((halves * halves) % modulo - (shorterHalves * shorterHalves) % modulo) % modulo
+        var value = ((halves * halves)  - (shorterHalves * shorterHalves) ) % modulo
         if (value < 0) value = modulo + value
         c += ((length, value))
         value
@@ -35,7 +35,7 @@ object thirteen extends App {
         val half = recur(halfLength)
         val otherHalf = recur(otherHalfLength)
         val shorter = recur(halfLength - 1)
-        var value = (half * ((otherHalf - shorter) % modulo)) % modulo
+        var value = (half * ((otherHalf - shorter) )) % modulo
 
         if (value < 0) value = modulo + value
         c += ((length, value))
