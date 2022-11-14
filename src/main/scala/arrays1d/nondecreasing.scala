@@ -26,7 +26,6 @@ object  nondecreasing extends App {
 
       }
     }
-
     println(array.mkString(" "))
   }
 }
