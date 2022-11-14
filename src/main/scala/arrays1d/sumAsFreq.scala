@@ -228,7 +228,8 @@ object oneDsumWithErrors extends App {
     acc
   }
   )
-  //  println ("cleansed " + (System.currentTimeMillis() - long))
+
+
 
   val sorted2 = inverted.toList.sortWith((a, b) => (a._1 < b._1))
 
